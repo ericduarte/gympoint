@@ -6,11 +6,10 @@
   Sistema de gestão de acadamia proposta para Desafio final do GoStack 09 do Rockeseat
 </h3>
 
-#Repositório
-
 - Clonando respositório
 ```bash
 git clone git@github.com:ericduarte/gympoint.git
+cd gympoint
 ```
 
 # Backend
