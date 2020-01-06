@@ -45,7 +45,6 @@ export const CardBody = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  margin: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;

@@ -29,7 +29,6 @@ export const Logo = styled.img`
 export const Content = styled.div`
   height: 64px;
   width: 100%;
-  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
