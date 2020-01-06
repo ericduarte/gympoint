@@ -7,6 +7,7 @@ import Form from '../BasePage/form';
 import Label from '~/components/Label';
 import Input from '~/components/Input';
 import InfoInput from '~/components/InfoInput';
+import { formatCurrencyBR, stringToFloatBR } from '~/utils';
 
 export default function PlanForm({ ...props }) {
   const { formData } = props;
