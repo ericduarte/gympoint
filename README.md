@@ -85,7 +85,7 @@ yarn start
 cd mobile
 yarn install
 ```
--Altere a url base da api informando o IP do seu computador, caso esteja utilizando um dispositivo ligado a USB, ou informa o IP de acordo com os requisitos do seu emulador.
+- Altere a url base da api informando o IP do seu computador, caso esteja utilizando um dispositivo ligado a USB, ou informa o IP de acordo com os requisitos do seu emulador.
 
 src/services/api.js 
 ```bash
