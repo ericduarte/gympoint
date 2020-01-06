@@ -62,7 +62,7 @@ yarn dev
 yarn queue
 ```
 
-#Frontend
+# Frontend
 
 - Instalar dependências
 ```bash
@@ -77,7 +77,7 @@ yarn start
    email: admin@gympoint.com
    password: 123456
 
-#Mobile
+# Mobile
 - Instalar dependências
 ```bash
 cd mobile
