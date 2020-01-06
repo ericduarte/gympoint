@@ -3,7 +3,7 @@ import { Form } from '@rocketseat/unform';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import BasePage from '../BasePage';
-import { Question, TextArea } from './styles';
+import { Question, TextArea, Button } from './styles';
 
 import {
   helpOrderSearchRequest,
@@ -78,7 +78,7 @@ export default function HelpOrder() {
         <Form schema={schema} onSubmit={handleSubmitAwswer}>
           <Label>SUA RESPOSTA</Label>
           <TextArea multiline name="answer" />
-          <button type="submit" label="Responder Aluno" width="100%" />
+          <Button type="submit">Responder Aluno</Button>
         </Form>
       </Modal>
     </>

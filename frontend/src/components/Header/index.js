@@ -13,6 +13,10 @@ export default function Header() {
 
   const pages = [
     {
+      label: 'DASHBOARD',
+      path: '/dashboard',
+    },
+    {
       label: 'ALUNOS',
       path: '/student',
     },

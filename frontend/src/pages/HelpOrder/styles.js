@@ -9,24 +9,7 @@ export const Question = styled.span`
   text-align: center;
   display: flex;
   flex-direction: column;
-
-  button {
-    color: #fff;
-    border: 0;
-    border-radius: 4px;
-    font-size: 0.98em;
-    font-weight: bold;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: ${colors.primary};
-  }
-
-  label {
-    width: 100%;
-    text-align: center;
-  }
+  margin-bottom: 10px;
 `;
 
 export const TextArea = styled(Input)`
@@ -37,4 +20,19 @@ export const TextArea = styled(Input)`
   height: 120px;
   margin-bottom: 16px;
   width: 100%;
+`;
+
+export const Button = styled.button`
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  height: 44px;
+  width: 100%;
+  font-size: 0.98em;
+  font-weight: bold;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${colors.primary};
 `;

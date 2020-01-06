@@ -32,10 +32,10 @@ function* addHelpOrder(data) {
   try {
     const res = yield call(api.post, 'help-orders', data);
 
-    toast.success('HelpOrdero cadastrado com sucesso');
+    toast.success('Pedido de auxílio cadastrado com sucesso');
     yield put(helpOrderSaveSuccess(res.data));
   } catch (error) {
-    toast.error('Erro cadastrar helpOrdero!');
+    toast.error('Erro cadastrar Pedido de auxílio!');
     yield put(helpOrderSaveFailure());
   }
 }
@@ -43,10 +43,10 @@ function* addHelpOrder(data) {
 function* updateHelpOrder(data) {
   try {
     const res = yield call(api.post, `help-orders/${data.id}/answer`, data);
-    toast.success('HelpOrdero atualizado com sucesso');
+    toast.success('Pedido de auxílio respondido com sucesso');
     yield put(helpOrderSaveSuccess(res.data));
   } catch (error) {
-    toast.error(`Erro atualizar helpOrdero!${error}`);
+    toast.error(`Erro responder pedido de auxílio!${error}`);
     yield put(helpOrderSaveFailure());
   }
 }
@@ -67,10 +67,10 @@ function* deleteHelpOrder({ payload }) {
 
     yield call(api.delete, `helpOrders/${id}`);
 
-    toast.success('HelpOrdero removido com sucesso');
+    toast.success('Pedido de auxílio removido com sucesso');
     yield put(helpOrderDeleteSuccess(id));
   } catch (error) {
-    toast.error(`Erro remover helpOrderos! ${error}`);
+    toast.error(`Erro remover Pedido de auxílios! ${error}`);
     yield put(helpOrderFailure());
   }
 }

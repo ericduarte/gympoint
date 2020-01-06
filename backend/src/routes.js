@@ -51,7 +51,7 @@ routes.post('/students/:student_id/checkins',authorizeMiddleware(['student']), C
 // routes.get('/students/:student_id/help-orders', HelpOrderController.index);
 routes.post('/students/:student_id/help-orders',authorizeMiddleware(['student']), HelpOrderController.store);
 routes.get('/students/:student_id/help-orders',authorizeMiddleware(['student']), StudentHelpOrderController.index);
-routes.post('/help-orders/:id/answer', authorizeMiddleware(['student']), HelpOrderController.update);
+routes.post('/help-orders/:id/answer', authorizeMiddleware(['admin']), HelpOrderController.update);
 routes.get('/help-orders',authorizeMiddleware(['admin']), HelpOrderController.index);
 
 export default routes;

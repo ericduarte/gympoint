@@ -55,10 +55,10 @@ function* addRegistration(data) {
   try {
     const res = yield call(api.post, 'registrations', data);
 
-    toast.success('Registrationo cadastrado com sucesso');
+    toast.success('Matrícula cadastrada com sucesso');
     yield put(registrationSaveSuccess(res.data));
   } catch (error) {
-    toast.error(`Erro cadastrar matrícula!${error}`);
+    toast.error(`Erro cadastrar matrícula!`);
     yield put(registrationSaveFailure());
   }
 }
@@ -68,7 +68,7 @@ function* updateRegistration(data) {
     data.start_date = parseISO(data.start_date);
     const res = yield call(api.put, `registrations/${data.id}`, data);
 
-    toast.success('Registrationo atualizado com sucesso');
+    toast.success('Matrícula atualizada com sucesso');
     yield put(registrationSaveSuccess(res.data));
   } catch (error) {
     toast.error(`Erro ao atualizar matrícula!${error}`);
