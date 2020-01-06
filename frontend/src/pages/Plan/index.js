@@ -13,8 +13,8 @@ export default function Plan() {
   return (
     <BasePage
       listHeader="Gerenciamento de planos"
-      addHeader="Cadastro de planos"
-      updateHeader="Edição de planos"
+      insertHeader="Cadastro de planos"
+      editHeader="Edição de planos"
       searchField="title"
       resource="plan"
       searchAction={planSearchRequest}

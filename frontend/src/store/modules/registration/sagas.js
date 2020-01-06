@@ -26,7 +26,7 @@ function* searchRegistrations({ payload }) {
     const { data } = res;
     const parsedList = data.list.map(item => ({
       ...item,
-      start_date: format(parseISO(item.start_date), 'yyyy-MM-dd'),
+      start_date: parseISO(item.start_date),
       end_date: format(parseISO(item.end_date), 'yyyy-MM-dd'),
       startDateFormatted: format(
         parseISO(item.start_date),
@@ -91,10 +91,10 @@ function* deleteRegistration({ payload }) {
 
     yield call(api.delete, `registrations/${id}`);
 
-    toast.success('Registrationo removido com sucesso');
+    toast.success('Matrículas removida com sucesso');
     yield put(registrationDeleteSuccess(id));
   } catch (error) {
-    toast.error(`Erro remover registrationos! ${error}`);
+    toast.error(`Erro remover matrícula!`);
     yield put(registrationFailure());
   }
 }

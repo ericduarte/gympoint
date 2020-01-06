@@ -20,6 +20,8 @@ export default function BasePage(props) {
     showAdd,
     searchPlaceHolder,
     listHeader,
+    editHeader,
+    insertHeader,
     showActions,
     customActions,
   } = props;
@@ -50,6 +52,7 @@ export default function BasePage(props) {
             schema={formSchema}
             saveAction={saveAction}
             setPageStateAction={setPageStateAction}
+            header={insertHeader}
           />
         );
       case 'EDITING':
@@ -59,6 +62,7 @@ export default function BasePage(props) {
             formData={formData}
             saveAction={saveAction}
             setPageStateAction={setPageStateAction}
+            header={editHeader}
             id={formData.id}
           />
         );
@@ -103,13 +107,14 @@ BasePage.defaultProps = {
   Form: null,
   showAdd: true,
   searchPlaceHolder: null,
+  editHeader: null,
+  insertHeader: null,
 };
 
 BasePage.propTypes = {
   formSchema: PropTypes.shape().isRequired,
   resource: PropTypes.string.isRequired,
   fields: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  listHeader: PropTypes.string.isRequired,
   setPageStateAction: PropTypes.func.isRequired,
   showActions: PropTypes.func,
   customActions: PropTypes.arrayOf(
@@ -127,4 +132,7 @@ BasePage.propTypes = {
   Form: PropTypes.element,
   showAdd: PropTypes.bool,
   searchPlaceHolder: PropTypes.string,
+  editHeader: PropTypes.string,
+  insertHeader: PropTypes.string,
+  listHeader: PropTypes.string.isRequired,
 };

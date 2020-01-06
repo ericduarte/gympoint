@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect, useState, useMemo } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { format, addMonths, parseISO } from 'date-fns';
+import { format, addMonths } from 'date-fns';
 import PropTypes from 'prop-types';
 import pt from 'date-fns/locale/pt';
 import * as Yup from 'yup';
@@ -10,6 +10,7 @@ import AsyncSelect from '~/components/AsyncSelect';
 import Label from '~/components/Label';
 import Input from '~/components/Input';
 import InfoInput from '~/components/InfoInput';
+import DatePicker from '~/components/DatePicker';
 import { formatCurrencyBR, isValidDate } from '~/utils';
 import api from '~/services/api';
 
@@ -91,9 +92,9 @@ export default function RegistrationForm({ ...props }) {
   useEffect(() => {
     setPlan(initialPlan);
     setStudent(initialStudent);
-    if (start_date) setStartDate(parseISO(start_date));
+    if (start_date) setStartDate(start_date);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [formData]);
 
   return (
     <Form {...props} schema={schema}>
@@ -128,10 +129,10 @@ export default function RegistrationForm({ ...props }) {
           </Col>
           <Col sm={3}>
             <Label>DATA DE INÍCIO</Label>
-            <Input
+            <DatePicker
+              id="start_date"
               name="start_date"
-              type="date"
-              onChange={e => setStartDate(parseISO(e.target.value))}
+              onChange={date => setStartDate(date)}
             />
           </Col>
           <Col sm={3}>

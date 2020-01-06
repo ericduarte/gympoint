@@ -21,8 +21,8 @@ export default function Registration() {
   return (
     <BasePage
       listHeader="Gerenciamento de matrículas"
-      addHeader="Cadastro de matrículas"
-      updateHeader="Edição de matrículas"
+      editHeader="Edição de matrículas"
+      insertHeader="Cadastro de matrículas"
       searchField="title"
       resource="registration"
       searchAction={registrationSearchRequest}

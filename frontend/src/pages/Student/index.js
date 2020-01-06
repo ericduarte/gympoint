@@ -13,8 +13,8 @@ export default function Student() {
     <BasePage
       resource="student"
       listHeader="Gerenciamento de alunos"
-      addHeader="Cadastro de alunos"
-      updateHeader="Edição de alunos"
+      insertHeader="Cadastro de alunos"
+      editHeader="Edição de alunos"
       searchField="name"
       fields={[
         { name: 'name', displayName: 'NOME', textAlign: 'left' },
