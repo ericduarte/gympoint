@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Sistema de gestão de acadamia proposta para Desafio final do GoStack 09 do Rockeseat
+  Sistema de gestão de academias proposta para Desafio final do GoStack 09 do Rockeseat
 </h3>
 
 - Clonando respositório
