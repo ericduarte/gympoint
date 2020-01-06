@@ -24,7 +24,7 @@ export default function RegistrationForm({ ...props }) {
   const schema = Yup.object().shape({
     student_id: Yup.string().required('Informa o estudante'),
     plan_id: Yup.number().required('Informe o plano'),
-    start_date: Yup.number().required('Informe a data de início'),
+    start_date: Yup.date().required('Informe a data de início'),
   });
 
   useMemo(async () => {
@@ -86,12 +86,12 @@ export default function RegistrationForm({ ...props }) {
     title: formData.plan.title,
   };
 
-  const { start_date } = formData;
+  const start_date = formData && formData.start_date;
 
   useEffect(() => {
     setPlan(initialPlan);
     setStudent(initialStudent);
-    setStartDate(parseISO(start_date));
+    if (start_date) setStartDate(parseISO(start_date));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -131,9 +131,7 @@ export default function RegistrationForm({ ...props }) {
             <Input
               name="start_date"
               type="date"
-              onChange={e => {
-                setStartDate(parseISO(e.target.value));
-              }}
+              onChange={e => setStartDate(parseISO(e.target.value))}
             />
           </Col>
           <Col sm={3}>

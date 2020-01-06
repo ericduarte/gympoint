@@ -65,7 +65,6 @@ function* addRegistration(data) {
 
 function* updateRegistration(data) {
   try {
-    data.start_date = parseISO(data.start_date);
     const res = yield call(api.put, `registrations/${data.id}`, data);
 
     toast.success('Matrícula atualizada com sucesso');
@@ -78,7 +77,7 @@ function* updateRegistration(data) {
 
 function* saveRegistration({ payload }) {
   const { id } = payload.data;
-
+  console.tron.log(payload.data);
   if (id) {
     yield updateRegistration(payload.data);
   } else {

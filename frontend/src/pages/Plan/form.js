@@ -7,8 +7,6 @@ import Form from '../BasePage/form';
 import Label from '~/components/Label';
 import Input from '~/components/Input';
 import InfoInput from '~/components/InfoInput';
-import FloatInput from '~/components/FloatInput';
-import { formatCurrencyBR, stringToFloatBR } from '~/utils';
 
 export default function PlanForm({ ...props }) {
   const { formData } = props;
@@ -48,11 +46,12 @@ export default function PlanForm({ ...props }) {
         <Row>
           <Col sm={6}>
             <Label>Preço(Mensal)</Label>
-            <FloatInput
+            <Input
               placeholder="Informe o Preço"
               name="price"
+              type="number"
               onChange={e => {
-                setPrice(stringToFloatBR(e));
+                setPrice(e.target.value);
               }}
             />
           </Col>
