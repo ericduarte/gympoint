@@ -73,6 +73,9 @@ yarn install
 ```bash
 yarn start
 ```
+- Faça login com o usuário adicionado nos seeds anteriorment
+   email: admin@gympoint.com
+   password: 123456
 
 #Mobile
 - Instalar dependências
