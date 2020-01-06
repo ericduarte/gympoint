@@ -50,7 +50,6 @@ export default function CheckIn() {
       loadCheckins(studentId);
       Alert.alert('Sucesso', 'Check-in realizado com sucesso!');
     } catch (error) {
-      console.tron.log(error);
       Alert.alert(
         'Falha ao realizar check-in',
         'Você já treinou 5 vezes essa semana.'
