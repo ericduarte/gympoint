@@ -85,6 +85,12 @@ yarn start
 cd mobile
 yarn install
 ```
+-Altere a url base da api
+src/services/api.js 
+```bash
+
+```
+
 - Iniciar projeto
 ```bash
 react-native run-android
