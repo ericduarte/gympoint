@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/eric/Desenvolvimento/Estudos/DesafioFinal/Gympoint/mobile/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/7fb55b30f7349a83d97f8b5440b64eef/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/eric/.gradle/caches/transforms-2/files-2.1/ef4ff0e73ac08dbb70ba0d0fbb7a0d06/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

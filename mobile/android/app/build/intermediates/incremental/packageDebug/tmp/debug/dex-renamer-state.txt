@@ -1,0 +1,4 @@
+#Sun Jan 05 18:50:48 BRT 2020
+base.0=/home/eric/Desenvolvimento/Estudos/DesafioFinal/Gympoint/mobile/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

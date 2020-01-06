@@ -1,0 +1,45 @@
+import React from 'react';
+import { MdCheckCircle } from 'react-icons/md';
+import BasePage from '../BasePage';
+import RegistrationForm from './form';
+
+import {
+  registrationSearchRequest,
+  registrationDeleteRequest,
+  registrationSaveRequest,
+  registrationSetPageState,
+} from '~/store/modules/registration/actions';
+
+export default function Registration() {
+  function handleActiveField(status) {
+    return status ? (
+      <MdCheckCircle size={23} color="#42CB59" />
+    ) : (
+      <MdCheckCircle size={23} color="#DDDDDD" />
+    );
+  }
+  return (
+    <BasePage
+      listHeader="Gerenciamento de matrículas"
+      addHeader="Cadastro de matrículas"
+      updateHeader="Edição de matrículas"
+      searchField="title"
+      resource="registration"
+      searchAction={registrationSearchRequest}
+      removeAction={registrationDeleteRequest}
+      saveAction={registrationSaveRequest}
+      setPageStateAction={registrationSetPageState}
+      showActions
+      Form={RegistrationForm}
+      searchPlaceHolder="Informe o aluno..."
+      fields={[
+        { name: 'id', displayName: 'Código' },
+        { name: 'student.name', displayName: 'Aluno' },
+        { name: 'plan.title', displayName: 'Plano' },
+        { name: 'startDateFormatted', displayName: 'Início' },
+        { name: 'endDateFormatted', displayName: 'Fim' },
+        { name: 'active', displayName: 'Ativa', action: handleActiveField },
+      ]}
+    />
+  );
+}
