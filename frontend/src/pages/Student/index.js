@@ -17,10 +17,9 @@ export default function Student() {
       updateHeader="Edição de alunos"
       searchField="name"
       fields={[
-        { name: 'id', displayName: 'Código' },
-        { name: 'name', displayName: 'Nome' },
-        { name: 'email', displayName: 'e-mail' },
-        { name: 'age', displayName: 'Idade' },
+        { name: 'name', displayName: 'NOME', dataType: 'string' },
+        { name: 'email', displayName: 'E-MAIL', dataType: 'string' },
+        { name: 'age', displayName: 'IDADE', dataType: 'integer' },
       ]}
       searchAction={studentsSearchRequest}
       removeAction={studentsDeleteRequest}

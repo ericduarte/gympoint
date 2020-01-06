@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table } from './styles';
+import { Table, ColumnHeader, Column } from './styles';
 import Loading from '../Loading';
 import LabelButton from '~/components/LabelButton';
 
@@ -29,7 +29,11 @@ export default function DataTable(props) {
     return (
       <tr role="row">
         {fields.map(field => {
-          return <th key={field.name}>{field.displayName}</th>;
+          return (
+            <ColumnHeader key={field.name} dataType={field.dataType}>
+              {field.displayName}
+            </ColumnHeader>
+          );
         })}
         {showActions && <th> </th>}
       </tr>
@@ -55,7 +59,11 @@ export default function DataTable(props) {
       <tr role="row" key={row[keyField]}>
         {fields &&
           fields.map(field => {
-            return <td key={field.name}>{parseField(row, field)}</td>;
+            return (
+              <Column key={field.name} type={field.dataType}>
+                {parseField(row, field)}
+              </Column>
+            );
           })}
         {(showActions || showCustomActions) && (
           <td>

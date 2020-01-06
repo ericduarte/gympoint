@@ -8,7 +8,6 @@ export const Table = styled.table`
 
   th,
   td {
-    text-align: center;
     padding: 8px;
   }
 
@@ -21,4 +20,46 @@ export const Table = styled.table`
   button {
     float: right;
   }
+`;
+
+export const ColumnHeader = styled.th`
+  text-align: ${props => {
+    switch (props.dataType) {
+      case 'integer': {
+        return 'center';
+      }
+
+      case 'string': {
+        return 'left';
+      }
+
+      case 'float': {
+        return 'right';
+      }
+
+      default:
+        return 'left';
+    }
+  }};
+`;
+
+export const Column = styled.td`
+  text-align: ${props => {
+    switch (props.type) {
+      case 'integer': {
+        return 'center';
+      }
+
+      case 'string': {
+        return 'left';
+      }
+
+      case 'float': {
+        return 'right';
+      }
+
+      default:
+        return 'left';
+    }
+  }};
 `;
