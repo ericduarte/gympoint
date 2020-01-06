@@ -83,6 +83,7 @@ yarn start
 - Instalar dependências
 ```bash
 cd mobile
+yarn install
 ```
 - Iniciar projeto
 ```bash
