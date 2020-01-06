@@ -40,8 +40,6 @@ export default function HelpOrderShow({ navigation }) {
         [helpOrder.answer_at]
     );
 
-    console.tron.log('Chegou aqui 2');
-
     return (
         <Container>
             <HelpOrderCard>
