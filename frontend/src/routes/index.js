@@ -4,6 +4,7 @@ import Route from './Route';
 
 import SignIn from '../pages/SignIn';
 import Student from '../pages/Student';
+import Dashboard from '../pages/Dashboard';
 import Registration from '../pages/Registration';
 import HelpOrder from '../pages/HelpOrder';
 import Plan from '../pages/Plan';
@@ -16,6 +17,7 @@ class Routes extends Component {
     return (
       <Switch>
         <Route path="/" exact component={SignIn} />
+        <Route path="/dashboard" component={Dashboard} isPrivate />
         <Route path="/register" component={SignUp} />
         <Route path="/profile" component={Profile} isPrivate />
         <Route path="/registration" component={Registration} isPrivate />

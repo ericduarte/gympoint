@@ -2,6 +2,7 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { format, addMonths, parseISO } from 'date-fns';
+import PropTypes from 'prop-types';
 import pt from 'date-fns/locale/pt';
 import * as Yup from 'yup';
 import Form from '../BasePage/form';
@@ -12,7 +13,7 @@ import InfoInput from '~/components/InfoInput';
 import { formatCurrencyBR, isValidDate } from '~/utils';
 import api from '~/services/api';
 
-export default function Registration({ ...props }) {
+export default function RegistrationForm({ ...props }) {
   const { formData } = props;
   const [startDate, setStartDate] = useState(null);
   const [plan, setPlan] = useState(null);
@@ -148,3 +149,7 @@ export default function Registration({ ...props }) {
     </Form>
   );
 }
+
+RegistrationForm.propTypes = {
+  formData: PropTypes.shape().isRequired,
+};

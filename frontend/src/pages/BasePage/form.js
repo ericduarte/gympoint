@@ -7,7 +7,6 @@ import { CardHeader, CardBody, Button } from './styles';
 
 export default function BasePage(props) {
   const {
-    FormWrapper,
     schema,
     formData,
     id,
@@ -60,9 +59,14 @@ BasePage.defaultProps = {
 };
 
 BasePage.propTypes = {
-  FormWrapper: PropTypes.func.isRequired,
   schema: PropTypes.shape().isRequired,
   formData: PropTypes.shape(),
   id: PropTypes.number,
   header: PropTypes.string.isRequired,
+  saveAction: PropTypes.func.isRequired,
+  setPageStateAction: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };

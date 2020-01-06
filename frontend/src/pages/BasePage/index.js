@@ -7,7 +7,6 @@ import List from './list';
 export default function BasePage(props) {
   const [formData, setFormData] = useState({});
   const {
-    FormWrapper,
     formSchema,
     resource,
     fields,
@@ -16,13 +15,13 @@ export default function BasePage(props) {
     saveAction,
     searchAction,
     searchField,
-    listHeader,
-    showActions,
     showCustomActions,
-    customActions,
     Form,
     showAdd,
     searchPlaceHolder,
+    listHeader,
+    showActions,
+    customActions,
   } = props;
 
   const pageState = useSelector(state => {
@@ -49,7 +48,6 @@ export default function BasePage(props) {
         return (
           <Form
             schema={formSchema}
-            FormWrapper={FormWrapper}
             saveAction={saveAction}
             setPageStateAction={setPageStateAction}
           />
@@ -58,7 +56,6 @@ export default function BasePage(props) {
         return (
           <Form
             schema={formSchema}
-            FormWrapper={FormWrapper}
             formData={formData}
             saveAction={saveAction}
             setPageStateAction={setPageStateAction}
@@ -97,10 +94,18 @@ export default function BasePage(props) {
 
 BasePage.defaultProps = {
   showActions: true,
+  customActions: null,
+  removeAction: null,
+  saveAction: null,
+  searchAction: null,
+  searchField: null,
+  showCustomActions: false,
+  Form: null,
+  showAdd: true,
+  searchPlaceHolder: null,
 };
 
 BasePage.propTypes = {
-  FormWrapper: PropTypes.func.isRequired,
   formSchema: PropTypes.shape().isRequired,
   resource: PropTypes.string.isRequired,
   fields: PropTypes.arrayOf(PropTypes.shape()).isRequired,
@@ -114,4 +119,12 @@ BasePage.propTypes = {
       color: PropTypes.string.isRequired,
     })
   ),
+  removeAction: PropTypes.func,
+  saveAction: PropTypes.func,
+  searchAction: PropTypes.func,
+  searchField: PropTypes.string,
+  showCustomActions: PropTypes.bool,
+  Form: PropTypes.element,
+  showAdd: PropTypes.bool,
+  searchPlaceHolder: PropTypes.string,
 };

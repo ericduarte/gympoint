@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, useMemo } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
+import PropTypes from 'prop-types';
 import * as Yup from 'yup';
 import Form from '../BasePage/form';
 import Label from '~/components/Label';
@@ -77,3 +78,7 @@ export default function PlanForm({ ...props }) {
     </Form>
   );
 }
+
+PlanForm.propTypes = {
+  formData: PropTypes.shape().isRequired,
+};

@@ -3,7 +3,6 @@ import { format, parseISO } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import { toast } from 'react-toastify';
 import api from '~/services/api';
-import { formatDatePicker } from '~/utils';
 import {
   registrationFailure,
   registrationSearchSuccess,
