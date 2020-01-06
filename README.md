@@ -22,10 +22,9 @@ yarn install
 ```
 - Crie uma base no Postgres
 - Crie uma base no Redis
+- Criar uma conta em um serviço de envio de email
 - Configurar variáveis de ambiente.
- Crie um arquivo .env na raíz do projeto, tomando como base o arquivo .env.example como no exemplo abaixo e preencha com as configurações necessárias(
-Nessa etapa é necessário ter um serviço de envio de emails para preencher as configurações necessárias para a funcionalidade de envio de email.
- ):
+ Crie um arquivo .env na raíz do projeto, tomando como base o arquivo .env.example como no exemplo abaixo e preencha com as configurações necessárias:
  ```env
 DB_HOST=127.0.0.1
 DB_USER=postgres
