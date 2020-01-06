@@ -73,7 +73,7 @@ yarn install
 ```bash
 yarn start
 ```
-- Faça login com o usuário adicionado nos seeds anteriorment
+- Faça login com o usuário adicionado nos seeds anteriormente
    email: admin@gympoint.com
    password: 123456
 
