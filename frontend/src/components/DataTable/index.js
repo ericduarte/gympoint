@@ -30,7 +30,7 @@ export default function DataTable(props) {
       <tr role="row">
         {fields.map(field => {
           return (
-            <ColumnHeader key={field.name} dataType={field.dataType}>
+            <ColumnHeader key={field.name} textAlign={field.textAlign}>
               {field.displayName}
             </ColumnHeader>
           );
@@ -60,7 +60,7 @@ export default function DataTable(props) {
         {fields &&
           fields.map(field => {
             return (
-              <Column key={field.name} type={field.dataType}>
+              <Column key={field.name} textAlign={field.textAlign}>
                 {parseField(row, field)}
               </Column>
             );

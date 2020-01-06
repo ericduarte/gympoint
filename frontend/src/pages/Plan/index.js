@@ -24,9 +24,17 @@ export default function Plan() {
       Form={PlanForm}
       searchPlaceHolder="Buscar plano..."
       fields={[
-        { name: 'title', displayName: 'TÍTULO' },
-        { name: 'formattedDuration', displayName: 'DURAÇÃO' },
-        { name: 'formattedPrice', displayName: 'VALOR p/ MÊS' },
+        { name: 'title', displayName: 'TÍTULO', textAlign: 'left' },
+        {
+          name: 'formattedDuration',
+          displayName: 'DURAÇÃO',
+          textAlign: 'center',
+        },
+        {
+          name: 'formattedPrice',
+          displayName: 'VALOR p/ MÊS',
+          textAlign: 'right',
+        },
       ]}
     />
   );

@@ -66,7 +66,9 @@ export default function HelpOrder() {
             color: 'edit',
           },
         ]}
-        fields={[{ name: 'student.name', displayName: 'Aluno' }]}
+        fields={[
+          { name: 'student.name', displayName: 'Aluno', textAlign: 'left' },
+        ]}
       />
       <Modal
         title="PERGUNTA DO ALUNO"

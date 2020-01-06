@@ -33,12 +33,20 @@ export default function Registration() {
       Form={RegistrationForm}
       searchPlaceHolder="Informe o aluno..."
       fields={[
-        { name: 'id', displayName: 'Código' },
-        { name: 'student.name', displayName: 'Aluno' },
-        { name: 'plan.title', displayName: 'Plano' },
-        { name: 'startDateFormatted', displayName: 'Início' },
-        { name: 'endDateFormatted', displayName: 'Fim' },
-        { name: 'active', displayName: 'Ativa', action: handleActiveField },
+        { name: 'student.name', displayName: 'Aluno', textAlign: 'left' },
+        { name: 'plan.title', displayName: 'Plano', textAlign: 'left' },
+        {
+          name: 'startDateFormatted',
+          displayName: 'Início',
+          textAlign: 'center',
+        },
+        { name: 'endDateFormatted', displayName: 'Fim', textAlign: 'center' },
+        {
+          name: 'active',
+          displayName: 'Ativa',
+          action: handleActiveField,
+          textAlign: 'center',
+        },
       ]}
     />
   );
