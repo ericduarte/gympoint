@@ -16,8 +16,7 @@ import {
 } from './styles';
 
 export default function HelpOrderShow({ navigation }) {
-    const helpOrder = navigation.getParam('helpOrder');
-    console.tron.log(helpOrder.created_at);
+    const helpOrder = navigation.getParam('helpOrder');   
     const questionTime = useMemo(
         () =>{
 
